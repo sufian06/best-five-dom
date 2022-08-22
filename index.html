@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Your Player</title>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" /> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        *,
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+
+        .bg-black-900 {
+            background-color: #0D0D0D;
+        }
+    </style>
+</head>
+
+<body class="bg-zinc-900">
+    <header class="mb-16">
+        <h1 class="text-5xl font-bold text-center text-amber-500 pb-8">Select Your Player</h1>
+    </header>
+
+    <main class="w-9/12 mx-auto text-white">
+        <div class="grid grid-cols-4 gap-4">
+            <div class="col-span-3 grid grid-cols-3 gap-4">
+
+                <div class="text-center border-gray-800 border-2 bg-black-900">
+                    <img src="images/messi10.png" class="w-full h-64 mb-6" alt="">
+                    <h2 class="text-2xl font-extrabold mb-2">Leo Messi</h2>
+                    <p class="mb-6 text-gray-400 font-medium">236 Goals<span class="mr-2 ml-2"></span>120
+                        Assist</p>
+                    <button class="font-bold bg-sky-800 hover:bg-sky-900 py-2 px-24 mb-8"
+                        onclick="addToSelect()">SELECT</button>
+                </div>
+
+                <div class="text-center border-gray-800 border-2 bg-black-900">
+                    <img src="images/hakimi.png" class="w-full h-64 mb-6" alt="">
+                    <h2 class="text-2xl font-extrabold mb-2">Achraf Hakimi</h2>
+                    <p class="mb-6 text-gray-400 font-medium">236 Goals<span class="mr-2 ml-2"></span>120
+                        Assist</p>
+                    <button class="font-bold bg-sky-800 hover:bg-sky-900 py-2 px-24 mb-8"
+                        onclick="addToSelect()">SELECT</button>
+                </div>
+
+                <div class="text-center border-gray-800 border-2 bg-black-900">
+                    <img src="images/neymar.png" class="w-full h-64 mb-6" alt="">
+                    <h2 class="text-2xl font-extrabold mb-2">Naymar Jr.</h2>
+                    <p class="mb-6 text-gray-400 font-medium">236 Goals<span class="mr-2 ml-2"></span>120
+                        Assist</p>
+                    <button class="font-bold bg-sky-800 hover:bg-sky-900 py-2 px-24 mb-8"
+                        onclick="addToSelect()">SELECT</button>
+                </div>
+
+                <div class="text-center border-gray-800 border-2 bg-black-900">
+                    <img src="images/mbappe.png" class="w-full h-64 mb-6" alt="">
+                    <h2 class="text-2xl font-extrabold mb-2">Kylian Mbappe</h2>
+                    <p class="mb-6 text-gray-400 font-medium">236 Goals<span class="mr-2 ml-2"></span>120
+                        Assist</p>
+                    <button class="font-bold bg-sky-800 hover:bg-sky-900 py-2 px-24 mb-8"
+                        onclick="addToSelect()">SELECT</button>
+                </div>
+
+                <div class="text-center border-gray-800 border-2 bg-black-900">
+                    <img src="images/icardi.png" class="w-full h-64 mb-6" alt="">
+                    <h2 class="text-2xl font-extrabold mb-2">Mauro Icardi</h2>
+                    <p class="mb-6 text-gray-400 font-medium">236 Goals<span class="mr-2 ml-2"></span>120
+                        Assist</p>
+                    <button class="font-bold bg-sky-800 hover:bg-sky-900 py-2 px-24 mb-8"
+                        onclick="addToSelect()">SELECT</button>
+                </div>
+
+                <div class="text-center border-gray-800 border-2 bg-black-900">
+                    <img src="images/ekitikepng.png" class="w-full h-64 mb-6" alt="">
+                    <h2 class="text-2xl font-extrabold mb-2">Hugo Ekitike</h2>
+                    <p class="mb-6 text-gray-400 font-medium">0 Goals<span class="mr-2 ml-2"></span>0
+                        Assist</p>
+                    <button class="font-bold bg-sky-800 hover:bg-sky-900 py-2 px-24 mb-8"
+                        onclick="addToSelect()">SELECT</button>
+                </div>
+
+                <div class="text-center border-gray-800 border-2 bg-black-900">
+                    <img src="images//verratti.png" class="w-full h-64 mb-6" alt="">
+                    <h2 class="text-2xl font-extrabold mb-2">Marco Veratti</h2>
+                    <p class="mb-6 text-gray-400 font-medium">236 Goals<span class="mr-2 ml-2"></span>120
+                        Assist</p>
+                    <button class="font-bold bg-sky-800 hover:bg-sky-900 py-2 px-24 mb-8"
+                        onclick="addToSelect()">SELECT</button>
+                </div>
+
+
+
+            </div>
+            <div>
+                <div>
+                    <!-- aside selected-area -->
+                    <div class="bg-blue-900 h-104 mb-8 py-4">
+                        <h2 class="text-4xl text-center mb-6">Selected V <span id="total-products"
+                                class="text-blue-500">0</span>
+                        </h2>
+                        <div id="player-list" class="ml-4 mb-8">
+
+                        </div>
+                    </div>
+                </div>
+                <!-- budget-area -->
+                <div class="bg-black-900 p-4 text-center">
+                    <h2 class="text-4xl py-2 text-center font-bold mb-6">Budget</h2>
+                    <div class="flex justify-around align-center">
+                        <label for="" class="text-gray-300 text-lg">Per Player</label>
+                        <input type="text" name="" id=""
+                            class="bg-transparent border-2 outline-none py-1 px-3 border-white-200 w-2/4 font-medium">
+                    </div>
+                    <button class="font-bold bg-sky-800 hover:bg-sky-900 py-2 px-24 my-6">Calculate</button>
+
+                    <div class="flex justify-around align-center mb-4">
+                        <p class="text-gray-300 text-lg">Player Expenses</p>
+                        <p class="w-2/4 font-bold text-2xl">
+                            $<span>00</span></p>
+                    </div>
+
+                    <div class="flex justify-around align-center mb-4">
+                        <label for="" class="text-gray-300 text-lg">Manager</label>
+                        <input type="text" name="" id=""
+                            class="bg-transparent border-2 outline-none py-1 px-3 border-white-200 w-2/4 font-medium">
+                    </div>
+
+                    <div class="flex justify-around align-center">
+                        <label for="" class="text-gray-300 text-lg">Coach</label>
+                        <input type="text" name="" id=""
+                            class="bg-transparent border-2 outline-none py-1 px-3 border-white-200 w-2/4 font-medium">
+                    </div>
+
+                    <button class="font-bold bg-sky-800 hover:bg-sky-900 py-2 px-24 my-6">Calculate Total</button>
+
+                    <div class="flex justify-around align-center mb-4">
+                        <p class="text-gray-300 text-lg font-extrabold">Total</p>
+                        <p class="w-2/4 font-bold text-2xl text-orange-400">
+                            $<span>00</span></p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>

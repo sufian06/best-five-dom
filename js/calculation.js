@@ -31,12 +31,17 @@ document.getElementById("btn-total").addEventListener("click", function () {
   if(isNaN(manageraAmount || coachAmount || playerExpensesAmount)) {
     alert('Please input number only');
     return false;
-  } else if((manageraAmount || coachAmount || playerExpensesAmount) == '') {
+  } else if((manageraAmount || coachAmount) == '') {
     alert('Please input number');
     return false;
   }
 
   const newAmountTotal = playerExpensesAmount + manageraAmount + coachAmount;
+
+  if(isNaN(newAmountTotal)) {
+    alert('please enter number all inputfield');
+    return false;
+  }
 
   setTextElementValueById("total", newAmountTotal);
 });

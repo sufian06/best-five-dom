@@ -6,3 +6,14 @@ document.getElementById('btn-expenses').addEventListener('click', function(){
 
     return newExpensesTotal;
 });
+
+document.getElementById('btn-total').addEventListener('click', function(){
+    const manageraAmount = getInputFieldValueById('manager-input');
+    const coachAmount = getInputFieldValueById('coach-input');
+    const playerExpensesAmount = getTextElementValueById('expenses-total');
+    const newAmountTotal = playerExpensesAmount + manageraAmount + coachAmount;
+
+    setTextElementValueById('total', newAmountTotal);
+
+    console.log(newAmountTotal)
+});

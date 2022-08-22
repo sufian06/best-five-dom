@@ -1,18 +1,14 @@
 const palyerArr = [];
 
-
-
 function display(player) {
-    console.log(player);
     const playerList = document.getElementById('player-list');
     playerList.innerHTML = '';
 
     for(let i = 0; i < player.length; i++) {
         const name = player[i].playerName;
-        console.log(name)
 
         const ol = document.createElement('ol');
-        ol.innerHTML = `<li class="text-gray-300 text-lg">${i + 1}. ${name}</li>`
+        ol.innerHTML = `<li class="text-gray-300 text-lg ml-4 mb-2">${i + 1}. ${name}</li>`
         playerList.appendChild(ol);
         
     }
@@ -31,9 +27,12 @@ function addToSelect(element) {
     
     palyerArr.push(playerObj);
 
+    if(palyerArr.length > 5) {
+        alert('You can not select more than 5');
+        return false;
+    }
+
     display(palyerArr);
-
-    
-
-
 }
+
+

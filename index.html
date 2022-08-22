@@ -119,16 +119,18 @@
                     <h2 class="text-4xl py-2 text-center font-bold mb-6">Budget</h2>
                     <div class="flex justify-around align-center">
                         <label for="" class="text-gray-300 text-lg">Per Player</label>
-                        <input type="text" name="" id=""
+                        <input type="text" name="" id="player-input"
                             class="bg-transparent border-2 outline-none py-1 px-3 border-white-200 w-2/4 font-medium">
                     </div>
-                    <button class="font-bold bg-sky-800 hover:bg-sky-900 py-2 px-24 my-6">Calculate</button>
+                    <button id="btn-expenses"
+                        class="font-bold bg-sky-800 hover:bg-sky-900 py-2 px-24 my-6">Calculate</button>
 
                     <div class="flex justify-around align-center mb-4">
                         <p class="text-gray-300 text-lg">Player Expenses</p>
                         <p class="w-2/4 font-bold text-2xl">
-                            $<span>00</span></p>
+                            $<span id="expenses-total">00</span></p>
                     </div>
+
 
                     <div class="flex justify-around align-center mb-4">
                         <label for="" class="text-gray-300 text-lg">Manager</label>
@@ -157,6 +159,7 @@
 
     <script src="js/utilities.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/calculation.js"></script>
 </body>
 
 </html>
